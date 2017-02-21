@@ -48,7 +48,7 @@ public class FormDataControllerTest {
 
         this.mvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(content().string(String.format("content=%s&author=KenM", content)));
+                .andExpect(content().string(String.format("{content=%s, author=KenM}", content)));
     }
 
     @Test
@@ -62,6 +62,6 @@ public class FormDataControllerTest {
 
         this.mvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(content().string(String.format("KenM said %s", content)));
+                .andExpect(content().string(String.format("{content=%s, author=KenM}", content)));
     }
 }
