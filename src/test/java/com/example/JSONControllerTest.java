@@ -74,7 +74,7 @@ public class JSONControllerTest {
 
         this.mvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(content().string("Leo has 1 Oscar win(s)"));
+                .andExpect(content().string("Leo has 1 Oscar Win(s)"));
 
     }
 
